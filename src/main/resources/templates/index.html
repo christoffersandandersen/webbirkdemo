@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:Order="http://www.w3.org/1999/xhtml">
+
+
+<body>
+<h2>Orders: </h2>
+
+<div th:each="r:${orders}">
+    <div>
+        Order: <b th:text="${r.name}"> </b>
+        Id: <b th:int="${r.id}" ></b>
+        <b th:if="${r.completed} == true"> completed </b>
+
+    </div>
+</div>
+
+</body>
+
+
+</html>
